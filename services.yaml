@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: flask-dns
+  # namespace: opscool-mid-project
+spec:
+  selector:
+    app: flask-dns
+  ports:
+  - protocol: TCP
+    port: 5000
+    targetPort: 5000
+  type: LoadBalancer
